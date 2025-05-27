@@ -1,0 +1,69 @@
+.navbar {
+  background-color: #ffffff; /* Branco para a navbar */
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #3498db; /* Linha azul na base da navbar */
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #3498db; /* Azul primário */
+  text-decoration: none;
+}
+
+.navbar-intro {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+  max-width: 400px; /* Limita a largura da introdução */
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin-left: 25px;
+}
+
+.navbar-links li a {
+  color: #333; /* Texto escuro para os links */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.active {
+  color: #3498db; /* Azul ao passar o mouse ou ativo */
+  border-bottom: 2px solid #3498db;
+}
+
+.navbar-register-button {
+  background-color: #3498db;
+  color: white !important; /* Importante para sobrescrever a cor do link padrão */
+  padding: 10px 20px !important; /* Importante para sobrescrever o padding do link padrão */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-register-button:hover {
+  background-color: #2980b9; /* Azul um pouco mais escuro no hover */
+  text-decoration: none;
+  border-bottom: none; /* Remove sublinhado do hover do link padrão */
+}
