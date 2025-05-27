@@ -16,7 +16,6 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/features" element={<FeaturesPage />} />
             <Route path="/register" element={<RegistrationPage />} />
-            {/* Adicione mais rotas aqui conforme necessário */}
           </Routes>
         </main>
       </div>

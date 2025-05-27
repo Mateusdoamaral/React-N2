@@ -47,9 +47,9 @@ function RegistrationForm() {
     e.preventDefault();
     if (validate()) {
       console.log("Dados do Formulário:", formData);
-      // Aqui você enviaria os dados para um backend
+      // Aqui você envia os dados para um backend
       setSubmitted(true);
-      // Resetar formulário (opcional)
+      // Resetar formulário
       // setFormData({ name: '', email: '', password: '', confirmPassword: '', role: 'aluno' });
     } else {
       setSubmitted(false);

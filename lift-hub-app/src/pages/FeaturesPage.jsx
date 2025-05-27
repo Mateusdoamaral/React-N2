@@ -1,35 +1,31 @@
 import React, { useState } from 'react';
 import './FeaturesPage.css';
 
-// 1. Importe suas imagens de mockup da pasta assets
-//    Certifique-se de que essas imagens existam em 'src/assets/'
-//    Ajuste os nomes dos arquivos conforme necessário.
-import mockupImg1 from '../assets/images/mockup_celular3.png'; // Exemplo
-import mockupImg2 from '../assets/images/mockup_celular2.png'; // Exemplo
-import mockupImg3 from '../assets/images/mockup_celular1.png'; // Exemplo
-import mockupImg4 from '../assets/images/mockup_celular4.png'; // Exemplo
-// Adicione mais imports se tiver mais imagens
 
-// 2. Crie um array com as imagens importadas
+import mockupImg1 from '../assets/images/mockup_celular3.png';
+import mockupImg2 from '../assets/images/mockup_celular2.png';
+import mockupImg3 from '../assets/images/mockup_celular1.png';
+import mockupImg4 from '../assets/images/mockup_celular4.png';
+
+// array com as imagens importadas
 const mockupImages = [
   mockupImg1,
   mockupImg2,
   mockupImg3,
   mockupImg4
-  // Adicione mais imagens aqui se desejar
 ];
 
 function FeaturesPage() {
-  // 3. State para rastrear o índice da imagem atual do mockup
+  // State para rastrear o índice da imagem atual do mockup
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // 4. Função para ir para a PRÓXIMA imagem
+  // Função para ir para a PRÓXIMA imagem
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % mockupImages.length);
-    // O operador '%' (módulo) garante que volte para a primeira imagem após a última
+    // O operador '%' garante que volte para a primeira imagem após a última
   };
 
-  // 5. Função para ir para a imagem ANTERIOR
+  // Função para ir para a imagem ANTERIOR
   const handlePrevImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + mockupImages.length) % mockupImages.length);
     // Adicionar mockupImages.length antes de '%' garante que o resultado seja sempre positivo
@@ -84,8 +80,8 @@ function FeaturesPage() {
             )}
           </div>
 
-          {/* 6. Botões para navegar entre as imagens */}
-          {mockupImages.length > 1 && ( // Só mostra os botões se houver mais de uma imagem
+          {/* Botões para navegar entre as imagens */}
+          {mockupImages.length > 1 && (
             <div className="mockup-controls">
               <button onClick={handlePrevImage} className="mockup-button">
                 Anterior
